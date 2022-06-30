@@ -1,0 +1,40 @@
+Une sorte de glossaire des kaijuu
+
+Une carte par dossier de kaijuu:
+
+Doit afficher en titre son nom
+En dessous, une image
+Affiche une section au dessus lorsque l'on clique, l'idéal serait que les bords se mélangent à la page de base pour un effet esthétique
+plutôt que d'avoir l'image qui s'incruste, elle se fond en somme
+
+La section (le dossier du kaiju dans l'idée) contient
+
+Son nom
+Son image en background
+Ses coordonées (donc poids, taille, apparitions, niveau de dangerosité pour l'humanité, et pour la nature)
+Un texte descriptif plus étoffé, qui parlera, entre autre, de ses capacités et "faits d'armes"
+
+Il faudrait un CRUD pour intéragir avec les dossiers de kaiju
+Les options n'apparaitraient que si l'utilisateur est connecté idéalement
+
+
+CODE
+
+Il faut premièrement : 
+
+Un back, bien sur, pour la BDD
+
+La BDD comportera deux tables
+
+Une table agent, dans le lore, il s'agira des agents de la fondation de surveillance des kaiju, et irl, ce sont les users
+Une table Kaiju, qui contient les informations permettant la création des cartes de dossiers des kaiju
+
+Le front
+
+Une page principale, il faudrait d'abord un loader, pour le côté dossier secret, qui s'affiche APRES la connexion (le formulaire est obligatoire)
+Il faudrait que ça charge pendant un petit temps, juste pour permettre de lire le "top secret", et si possible une barre de chargement !
+
+
+Sur la page, on laisse un peu d'espace en haut, pour les affichages de dossiers
+plus bas, la liste des cartes de dossier sus mentionnés
+

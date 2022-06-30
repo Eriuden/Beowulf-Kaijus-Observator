@@ -1,0 +1,27 @@
+const mongoose = require("mongoose");
+
+const KaijuSchema = new mongoose.Schema({
+  picture: {
+    type: String,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  threatForHumanity: {
+    type: String,
+    required: true,
+  },
+  threatForEarth: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    trim: true,
+    maxlength: 500,
+  },
+});
+
+const KaijuModel = mongoose.model("post", KaijuSchema);
+module.exports = KaijuModel;

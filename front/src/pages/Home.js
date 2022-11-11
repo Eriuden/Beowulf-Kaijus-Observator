@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import KaijuCard from "../components/KaijuCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { UidContext } from "../components/AppContext";
 import { useContext } from "react";
 import { isEmpty } from "../components/Utils";
 import ConnexionForm from "../components/ConnexionForm";
 import AddKaijuForm from "../components/AddKaijuForm";
 import ShowKaiju from "../components/ShowKaiju";
+import { getKaijus } from "../actions/kaiju.action";
 
 export default function Home(kaiju) {
   const [showKaiju, setShowKaiju] = useState("false");
+  const dispatch = useDispatch()
   setTimeout(() => {
     document.querySelector(".preloader").style.display = "none";
   }, 10000);
 
   const kaijus = useSelector((state) => state.kaijusReducer);
   const uid = useContext(UidContext);
+
+  useEffect(()=> {
+    dispatch(getKaijus())
+  })
 
   //Tout d'abord, il faut le formulaire de connexion, pas d'entrée sur le dossier sans connexion
   //Après, on se retrouve sur la page avec les cartes des dossiers

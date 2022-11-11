@@ -23,5 +23,5 @@ const KaijuSchema = new mongoose.Schema({
   },
 });
 
-const KaijuModel = mongoose.model("post", KaijuSchema);
+const KaijuModel = mongoose.model("kaijus", KaijuSchema);
 module.exports = KaijuModel;

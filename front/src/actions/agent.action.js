@@ -46,7 +46,7 @@ export const updateAgent = (agentId, name, password, bio) => {
   };
 };
 
-export const deleteKaiju = (agentId, name, password, bio) => {
+export const deleteAgent = (agentId, name, password, bio) => {
   return (dispatch) => {
     return axios({
       method: "delete",

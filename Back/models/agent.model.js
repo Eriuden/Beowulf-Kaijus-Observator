@@ -71,5 +71,5 @@ agentSchema.static.login = async function (email, password) {
   throw Error("adresse mail incorrect");
 };
 
-const AgentModel = mongoose.model("user", agentSchema);
+const AgentModel = mongoose.model("agent", agentSchema);
 module.exports = AgentModel;

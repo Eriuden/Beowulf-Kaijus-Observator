@@ -10,8 +10,8 @@ import { getAgents } from "./actions/agent.action";
 import { getKaijus } from "./actions/kaiju.action";
 
 
-const composedEnhance = composeWithDevTools(applyMiddleware(thunk));
-const store = createStore(reducers, {}, composedEnhance);
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunk));
+const store = createStore(reducers, {}, composedEnhancer);
 
 store.dispatch(getAgents())
 store.dispatch(getKaijus())

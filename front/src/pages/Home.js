@@ -35,6 +35,13 @@ export default function Home(kaiju) {
   Tout le css à faire, la plus longue, j'essaierai tailwind !
   En matière de pur code, le projet est bon pour git, on verra plus tard, mais alors avec une mention without css alors
   
+  Relecture au 02/05/2023,
+  
+  récapitulons le fonctionnement,
+   il y a d'abord un formulaire pour les entrées des nouveaux monstres observés
+   plus bas, le ShowKaiju, c'est pour l'affichage en gros plan du dossier de la bête
+   a ne pas confondre avec le KaijuCard, là c'est direct visible, mais petit format qui sert à le répertorier, pas l'afficher
+  
   */
 
   return (
@@ -50,6 +57,7 @@ export default function Home(kaiju) {
               <span className="loader"></span>
             </div>
             <AddKaijuForm />
+         
             {showKaiju && <ShowKaiju kaiju={kaiju} />}
 
             <ul>

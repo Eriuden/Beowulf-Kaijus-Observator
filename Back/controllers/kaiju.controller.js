@@ -48,7 +48,7 @@ module.exports.createKaiju = async (req, res) => {
     threatForEarth: req.body.threatForEarth,
   });
 
-  //si ca marche, on sauvegarde le nouveau post et on renvoie un status 201 en json
+  //si ca marche, on sauvegarde le nouveau bestiau et on renvoie un status 201 en json
 
   try {
     const kaijuProfile = await newKaiju.save();

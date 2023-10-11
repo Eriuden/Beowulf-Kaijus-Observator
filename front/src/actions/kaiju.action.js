@@ -53,7 +53,7 @@ export const updateKaiju = (
     return axios({
       method: "put",
       url: `${process.env.REACT_APP_API_URL}api/kaiju/${kaijuId}`,
-      data: { description },
+      data: { description, threatForHumanity, threatForEarth },
     })
       .then((res) => {
         dispatch({

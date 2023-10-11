@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import useDispatch from "react-redux"
+import { getAgent } from "./actions/agent.action";
 
 function App() {
   const {uid, setUid} = useState(null)
@@ -22,7 +23,7 @@ function App() {
     }
     fetchToken()
 
-    if (uid) dispatch(getUser(uid))
+    if (uid) dispatch(getAgent(uid))
   }, [uid])
   
   return (

@@ -36,7 +36,9 @@ export const addKaiju = (data) => {
       .then((res) => {
         if (res.data.errors) {
           dispatch({ type: GET_KAIJU_ERRORS, payload: res.data.errors });
-        }
+        }else {
+          dispatch({ type: GET_KAIJU_ERRORS, payload: ""})
+      }
       });
   };
 };

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getKaiju } from "../actions/kaiju.action";
 
-export default function ShowKaiju(kaiju) {
+export default function ShowKaiju({kaiju}) {
   const dispatch = useDispatch();
 
   useEffect(() => {

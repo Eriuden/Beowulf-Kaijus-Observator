@@ -4,27 +4,26 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import reducers from "./reducers/baseOfReducer";
+import reducers from "./redux/reducers/baseOfReducer";
 
 import { getAgents } from "./actions/agent.action";
 import { getKaijus } from "./actions/kaiju.action";
+import { configureStore } from "@reduxjs/toolkit";
 
 
-const composedEnhancer = composeWithDevTools(applyMiddleware(thunk));
-const store = createStore(reducers, {}, composedEnhancer);
+
+const store = configureStore({reducer: reducers});
 
 store.dispatch(getAgents())
 store.dispatch(getKaijus())
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
-
     <Provider store={store}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </Provider>
-    
+    </Provider>   
   </React.StrictMode>
 );
